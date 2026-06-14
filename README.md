@@ -4,7 +4,16 @@ This is a repository for the web application made by group E1 for the course Web
 This web application contains multiple test where you can test various skills.
 This website is similar to https://humanbenchmark.com/ but the tests here are more difficult.
 
-**NOTE: This project was made in effectively about 2 weeks. There may be issues with this project, the code may not be up to standards everywhere so we could deliver the project on the given deadline.**
+**NOTE: This project was completed in approximately two weeks during the final block of Semester 1 (January 2026) to meet a fixed deadline. As a result, some implementation details and code quality decisions reflect the project's time constraints rather than the standards I would apply in a longer-term production setting.**
+
+| Metric | Grade |
+|---|---:|
+| Dutch grading system | **9.5 / 10.0** |
+| Approximate U.S. GPA equivalent | **4.0 / 4.0*** |
+| Approximate U.S. letter grade equivalent | **A+*** |
+| Distinction | **Best Frontend Award (Student Vote)** |
+
+\* Approximate U.S. equivalents based on published Dutch university conversion tables. The University of Amsterdam maps Dutch grades of [9.0–10.0 to a U.S. letter grade of A+](https://www.uva.nl/en/education/studying-at-the-uva/educational-style-grading-and-credits/education-style-grading-and-credits.html?utm_source=chatgpt.com), while University College Utrecht maps Dutch grades of [8.0–10.0 to a 4.0 GPA](https://students.uu.nl/en/university-college-utrecht/practical-information/rules-and-procedures/grade-conversion?utm_source=chatgpt.com). Formal conversions may vary by institution.
 
 ## More information:
 
@@ -18,11 +27,11 @@ More course information at https://datanose.nl/#course[138341]
 ### Group: E1
 Group members:
 
-Anthony Wan,      16270118 <br>
-Michiel Kamphuis, 15659763 <br>
-David Nouwen,     16406877 <br>
-Sean Li,          16068912 <br>
-Sven Menting,     16306058
+[Anthony Wan](https://github.com/Enteenie),      16270118 <br>
+[Michiel Kamphuis](https://michielo.com), 15659763 <br>
+[David Nouwen](https://github.com/DavidNouwen),     16406877 <br>
+[Sean Li](https://github.com/seanzlli),          16068912 <br>
+[Sven Menting](https://github.com/svenUvA),     16306058
 
 # API Documentation
 
