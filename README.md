@@ -1,5 +1,6 @@
 # SuperHumanBenchmark
 This is a repository for the web application made by group E1 for the course Webtechnologie INF at the University of Amsterdam.
+We are not responsible for any damage due to rage.
 
 This web application contains multiple test where you can test various skills.
 This website is similar to https://humanbenchmark.com/ but the tests here are more difficult.
