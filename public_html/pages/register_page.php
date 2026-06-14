@@ -16,6 +16,7 @@
 </head>
 
 <body>
+    <?php require_once __DIR__ . '/../../includes/demo-banner.php'; ?>
     <main class="page">
         <section class="card" aria-label="Login card">
             <div class="card_left">
@@ -133,5 +134,6 @@
 
 
     <script src="../assets/js/pages/register_page.js"></script>
+    <?php require_once __DIR__ . '/../../includes/demo-footer.php'; ?>
 </body>
 </html>

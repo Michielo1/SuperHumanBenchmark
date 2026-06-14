@@ -28,6 +28,7 @@ requireAuth('../pages/login_page.php');
     <?php include '../components/cookie-consent-include.php'; ?>
 </head>
 <body>
+    <?php require_once __DIR__ . '/../../includes/demo-banner.php'; ?>
     <!-- Navbar -->
     <?php $assetPath = '../'; include '../components/nav_bar/nav_bar.php'; ?>
     
@@ -151,5 +152,6 @@ requireAuth('../pages/login_page.php');
     </div>
 
     <?php $assetPath = '../'; include '../components/footer/footer.php'; ?>
+    <?php require_once __DIR__ . '/../../includes/demo-footer.php'; ?>
 </body>
 </html>

@@ -41,6 +41,13 @@ require_once INCLUDES_PATH . '/csrf.php';
 // Require CSRF token for reset-password
 requireCsrf();
 
+// Block reset password in demo mode
+if (defined('DEMO_MODE') && DEMO_MODE) {
+    http_response_code(403);
+    echo json_encode(['error' => 'Password reset is disabled in demo mode.']);
+    exit;
+}
+
 try {
     // Get JSON input
     $input = json_decode(file_get_contents('php://input'), true);

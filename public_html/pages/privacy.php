@@ -21,6 +21,7 @@
 </head>
 
 <body>
+  <?php require_once __DIR__ . '/../../includes/demo-banner.php'; ?>
   <?php $assetPath = '../'; include '../components/nav_bar/nav_bar.php'; ?>
 
   <div class="privacy-page">
@@ -222,6 +223,7 @@
 
   <script src="../assets/js/theme.js"></script>
   <script src="../assets/js/pages/privacy.js"></script>
+  <?php require_once __DIR__ . '/../../includes/demo-footer.php'; ?>
 
 </body>
 

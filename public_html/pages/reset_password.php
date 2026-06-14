@@ -14,6 +14,7 @@
     <?php include '../components/cookie-consent-include.php'; ?>
 </head>
 <body>
+    <?php require_once __DIR__ . '/../../includes/demo-banner.php'; ?>
     <main class="page">
         <section class="card" aria-label="Reset password card">
             <div class="card_left">
@@ -68,5 +69,6 @@
         </section>
     </main>
     <script src="../assets/js/pages/reset_password.js"></script>
+    <?php require_once __DIR__ . '/../../includes/demo-footer.php'; ?>
 </body>
 </html>

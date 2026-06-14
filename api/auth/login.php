@@ -77,8 +77,39 @@ try {
         exit;
     }
 
-    // Check email
-    $account = Account::findByEmail($email);
+    // Demo mode: check for demo credentials and auto-create if needed
+    if (defined('DEMO_MODE') && DEMO_MODE) {
+        $isDemoUser = ($email === DEMO_USER_EMAIL && $input['password'] === DEMO_USER_PASSWORD);
+        $isDemoAdmin = ($email === DEMO_ADMIN_EMAIL && $input['password'] === DEMO_ADMIN_PASSWORD);
+
+        if ($isDemoUser || $isDemoAdmin) {
+            // Ensure demo account exists in DB
+            $account = Account::findByEmail($email);
+            if ($account === null) {
+                $account = new Account();
+                $isUser = $isDemoUser;
+                $account->setUsername($isUser ? 'demo_user' : 'demo_admin');
+                $account->setFirstName('Demo');
+                $account->setLastName($isUser ? 'User' : 'Admin');
+                $account->setEmail($email);
+                $account->hashAndSetPassword($isUser ? DEMO_USER_PASSWORD : DEMO_ADMIN_PASSWORD);
+                $account->setIsAdmin((bool)$isDemoAdmin);
+                $account->save();
+            } else {
+                // Re-verify stored hash matches (in case DB was manually modified)
+                if (!password_verify($input['password'], $account->getWachtwoord())) {
+                    $account->hashAndSetPassword($isUser ? DEMO_USER_PASSWORD : DEMO_ADMIN_PASSWORD);
+                    $account->setIsAdmin((bool)$isDemoAdmin);
+                    $account->save();
+                }
+            }
+        } else {
+            $account = Account::findByEmail($email);
+        }
+    } else {
+        $account = Account::findByEmail($email);
+    }
+
     if ($account === null) {
         http_response_code(401);
         echo json_encode(['error' => 'Invalid credentials']);

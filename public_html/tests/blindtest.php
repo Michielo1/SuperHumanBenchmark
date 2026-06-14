@@ -24,6 +24,7 @@ requireAuth('../pages/login_page.php');
     <?php include '../components/cookie-consent-include.php'; ?>
   </head>
   <body>
+    <?php require_once __DIR__ . '/../../includes/demo-banner.php'; ?>
     <?php $assetPath = '../'; include '../components/nav_bar/nav_bar.php'; ?>
     <div class="text">
       <h1>
@@ -109,5 +110,6 @@ requireAuth('../pages/login_page.php');
       <p>Congratulations! You are not colorblind, I might be though.</p>
     </div>
     <?php $assetPath = '../'; include '../components/footer/footer.php'; ?>
+    <?php require_once __DIR__ . '/../../includes/demo-footer.php'; ?>
   </body>
 </html>

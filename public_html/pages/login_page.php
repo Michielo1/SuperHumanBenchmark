@@ -15,6 +15,7 @@
     <?php include '../components/cookie-consent-include.php'; ?>
 </head>
 <body>
+    <?php require_once __DIR__ . '/../../includes/demo-banner.php'; ?>
     <main class="page">
         <section class="card" aria-label="Login card">
             <div class="card_left">
@@ -61,6 +62,24 @@
                     <button class="btn" type="submit">Login</button>
                 </form>
 
+                <?php if (defined('DEMO_MODE') && DEMO_MODE): ?>
+                <div class="demo-credentials">
+                    <h3>Demo Accounts</h3>
+                    <table class="demo-creds-table">
+                        <tr>
+                            <td><strong>User</strong></td>
+                            <td><?php echo DEMO_USER_EMAIL; ?></td>
+                            <td><?php echo DEMO_USER_PASSWORD; ?></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Admin</strong></td>
+                            <td><?php echo DEMO_ADMIN_EMAIL; ?></td>
+                            <td><?php echo DEMO_ADMIN_PASSWORD; ?></td>
+                        </tr>
+                    </table>
+                </div>
+                <?php endif; ?>
+
                 <div class="brand">
                     <img class="brand_logo" src="../assets/img/logo_with_green_edge.svg" alt="Superhuman Benchmark Logo" />
                 </div>
@@ -71,5 +90,6 @@
 
 
     <script src="../assets/js/pages/login_page.js?v=2"></script>
+    <?php require_once __DIR__ . '/../../includes/demo-footer.php'; ?>
 </body>
 </html>

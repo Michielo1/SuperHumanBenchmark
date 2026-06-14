@@ -23,3 +23,14 @@ if (ENVIRONMENT === 'development') {
     ini_set('display_startup_errors', 1);
     error_reporting(E_ALL);
 }
+
+// ============================================================================
+// DEMO MODE CONFIGURATION
+// Uncomment and adjust for demo deployments.
+// The demo mode adds a top banner, bottom attribution bar, disables registration,
+// and provides demo accounts (user@demo.com / user, admin@demo.com / admin).
+// The database auto-resets every 30 minutes (configurable).
+// ============================================================================
+// require_once __DIR__ . '/demo-config.php';
+// define('DEMO_MODE', true);
+// define('DEMO_RESET_MINUTES', 30);

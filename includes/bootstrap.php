@@ -81,3 +81,11 @@ if (IS_HTTPS) {
 
 // Load configuration
 require_once INCLUDES_PATH . '/config.php';
+
+// Load demo configuration (defines DEMO_MODE, DEMO_RESET_MINUTES, demo credentials)
+require_once INCLUDES_PATH . '/demo-config.php';
+
+// Run demo auto-reset if enabled
+if (defined('DEMO_MODE') && DEMO_MODE) {
+    require_once INCLUDES_PATH . '/demo-reset.php';
+}

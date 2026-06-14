@@ -29,6 +29,7 @@ requireAdmin();
 </head>
 
 <body>
+    <?php require_once __DIR__ . '/../../includes/demo-banner.php'; ?>
 
     <div class="layout">
         <div class="sidebar_account">
@@ -144,6 +145,7 @@ requireAdmin();
     <?php $assetPath = '../'; include '../components/footer/footer.php'; ?>
 
     <script src="../assets/js/pages/admin_dashboard.js"></script>
+    <?php require_once __DIR__ . '/../../includes/demo-footer.php'; ?>
 </body>
 
 </html>

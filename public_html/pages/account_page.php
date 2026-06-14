@@ -51,6 +51,7 @@ if (!isset($basePath)) {
     </head>
 
     <body>
+        <?php require_once __DIR__ . '/../../includes/demo-banner.php'; ?>
         <div class="layout">
             <div class="sidebar_account">
                 <!-- Sidebar -->
@@ -155,5 +156,6 @@ if (!isset($basePath)) {
         <video class="footage" id="song_clip" muted playsinline>
             <source src="../assets/video/quantummechanics.mp4" type="video/mp4">
         </video>
+        <?php require_once __DIR__ . '/../../includes/demo-footer.php'; ?>
     </body>
 </html>

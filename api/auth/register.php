@@ -83,6 +83,13 @@ function email_valid(string $email):bool {
     );
 }
 
+// Block registration in demo mode
+if (defined('DEMO_MODE') && DEMO_MODE) {
+    http_response_code(403);
+    echo json_encode(['error' => 'Registration is disabled in demo mode. Use the demo accounts on the login page.']);
+    exit;
+}
+
 try {
     // Get JSON input
     $raw = file_get_contents('php://input');
