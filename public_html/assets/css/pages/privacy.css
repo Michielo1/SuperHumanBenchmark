@@ -1,0 +1,142 @@
+
+body {
+    background-color: var(--bg);
+    margin: 0;
+    padding: 0;
+    color: var(--text);
+}
+
+header {
+    background-color: var(--hero);
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 7px;
+
+    width: min(90%, 600px);
+    height: auto;
+    padding: 1rem;
+
+    margin-top: 90px;
+    box-sizing: border-box;
+}
+
+
+h1 {
+    width: 100%;
+    text-align: center;
+    font-size: 1.6rem;
+    margin: 0;
+    line-height: 1.2;
+    word-wrap: break-word;
+}
+
+
+.header-row {
+    display: flex;
+    justify-content: center;
+    margin-top: 8px;
+}
+
+.text {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    margin-left: 12.5%;
+    margin-right: 12.5%;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    align-self: center;
+    background-color: var(--surface);
+    padding: 20px;
+    border: solid;
+    border-radius: 10px;
+    border-width: 1px;
+    border-color: var(--border);
+}
+
+.text h3, .text h2, .text p{
+    align-self: center;
+}
+
+.line-between-text {
+    width: 95%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    height: 3px;
+    background-color: var(--border);
+    color: var(--border);
+}
+
+.cookies {
+    width: 70%;
+    align-self: center;
+    margin-top: -10%;
+    opacity: 1;
+    transition: 1s;
+}
+
+.monster {
+  width: 50%;
+  align-self: center;
+  opacity: 0;
+  margin-top: -48%;
+  margin-bottom: 20px;
+  transition: 1s;
+  scale: 1;
+  z-index: 1;
+}
+
+.text button {
+  width: 50%;
+  min-width: 285px;
+  align-self: center;
+  height: 70px;
+  font-size: 30px;
+  background-color: rgb(195, 0, 0);
+  border-radius: 20px;
+  transition: 0.2s;
+  margin-bottom: 20px;
+}
+
+.text button:hover {
+  background-color: rgb(180, 0, 0);
+  scale: 1.1;
+}
+
+.text button:active {
+  background-color: rgb(165, 0, 0);
+}
+.policy-summary {
+  display: block;                 /* important */
+  width: fit-content;
+  margin: 20px auto;              /* centers it */
+  padding: 0.7rem 1.2rem;
+
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background-color: var(--surface);
+  color: var(--text);
+
+  font-weight: 700;
+  cursor: pointer;
+  text-align: center;
+  list-style: none;
+}
+
+.policy-summary::-webkit-details-marker {
+  display: none;
+}
+.policy-summary::after {
+  content: " ▼";
+}
+
+@media (max-width: 600px) {
+  header {
+    width: 95%;
+    padding: 1rem 0.75rem;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+}

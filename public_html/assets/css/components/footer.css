@@ -1,0 +1,154 @@
+.footer {
+  position: relative;
+  width: 100%;
+  min-height: 33vh;
+  padding: 60px 0;
+  background-color: var(--hero);
+  color: var(--card-text);
+}
+
+.footer_logo {
+    display: block;
+    margin-top: 27px;
+    width: 200px;
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 800px) {
+  .footer {
+    min-height: 40vh;
+  }
+}
+
+
+@media (min-width: 800px) {
+    /* Prevent the logo from shrinking when the footer becomes constrained by
+       the sidebar offset on medium and larger screens */
+    .footer_logo {
+        flex: 0 0 200px;
+    }
+}
+
+.footer_logo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.footer_container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+}
+
+.footer_columns {
+    display: flex;
+    gap: 80px;
+    flex-wrap: wrap;
+}
+
+.footer_column {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+    margin: 6px 0;
+}
+
+.footer_column h3 {
+    font-family: 'Stack Sans Text', system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    font-weight: 700;
+    color: var(--card-text);
+}
+
+.footer_column a {
+    color: var(--text);
+    text-decoration: none;
+    margin-bottom: 2px;
+    font-family: 'Stack Sans Text', system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    font-weight: 700;
+    opacity: 0.9;
+}
+
+.footer_column a:hover {
+    text-decoration: underline;
+    opacity: 1;
+}
+
+/* logo swap (light or dark) */
+.footer_logo .dark-logo {
+  display: none;
+}
+
+.dark-mode .footer_logo .light-logo {
+  display: none;
+}
+
+.dark-mode .footer_logo .dark-logo {
+  display: block;
+}
+
+/* When a sidebar is present, give the footer some left padding so the
+   footer content lines up visually with the page content that is
+   offset by the sidebar. Only apply on wider viewports where the
+   sidebar is shown. */
+/* Ensure padding doesn't cause overflow */
+.footer_container {
+    box-sizing: border-box;
+}
+
+/* Start applying sidebar-specific layout adjustments at breakpoints that
+   prevent overlap and control how columns wrap. */
+
+/* Medium screens with a sidebar: stack into two columns per row to avoid
+   the footer sliding under the fixed sidebar (800px–1199px). */
+
+@media (min-width: 800px) and (max-width: 1199px) {
+    body:has(.sidebar) .footer_columns,
+    body.has-sidebar .footer_columns {
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    body:has(.sidebar) .footer_column,
+    body.has-sidebar .footer_column {
+        min-width: 0;
+        /* show two columns per row when sidebar present on medium screens
+           (use calc to account for the column gap so two columns fit neatly) */
+        flex: 0 0 calc(50% - 6px);
+        margin-bottom: 8px;
+    }
+
+    body:has(.sidebar) .footer_container,
+    body.has-sidebar .footer_container {
+        /* ensure the footer clears the fixed sidebar by offsetting by its full width */
+        padding-left: calc(24px + var(--sidebar-width, 220px));
+        padding-right: 24px;
+        max-width: calc(1100px - var(--sidebar-width, 220px));
+    }
+}
+
+/* On very wide screens keep the full sidebar offset and show all columns in one row */
+@media (min-width: 1200px) {
+    body:has(.sidebar) .footer_columns,
+    body.has-sidebar .footer_columns {
+        gap: 40px;
+        flex-wrap: nowrap;
+    }
+
+    body:has(.sidebar) .footer_column,
+    body.has-sidebar .footer_column {
+        min-width: 0;
+        flex: 0 0 auto;
+    }
+
+    body:has(.sidebar) .footer_container,
+    body.has-sidebar .footer_container {
+        /* use a smaller large-screen offset (120px) to match page content padding */
+        padding-left: calc(24px + var(--sidebar-offset-large, 120px));
+        max-width: calc(1100px - var(--sidebar-offset-large, 120px));
+    }
+}

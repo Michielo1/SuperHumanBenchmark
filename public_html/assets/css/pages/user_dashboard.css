@@ -1,0 +1,270 @@
+/* Dashboard Content Wrapper */
+.content {
+    margin-left: 220px;
+    padding: 2rem;
+    background-color: var(--bg);
+    min-height: 100vh;
+}
+
+/* Dashboard Header */
+.dashboard-header {
+    background: #628141;
+    color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+}
+
+.dashboard-header h1 {
+    margin: 0 0 0.5rem 0;
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: 'Moara Demo', system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+.user-info {
+    margin: 0;
+    opacity: 0.95;
+    font-size: 1rem;
+    font-family: 'Stack Sans Text', system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Dashboard Content */
+.dashboard-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.dashboard-header,
+.dashboard-content {
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+/* Benchmark Attempts Section */
+.benchmark-attempts {
+    background: var(--surface);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+}
+
+.benchmark-attempts h2 {
+    margin: 0 0 1.5rem 0;
+    color: var(--text);
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: 'Moara Demo', system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+.attempts-table-container {
+    overflow-x: auto;
+}
+
+.attempts-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+}
+
+.attempts-table thead {
+    background-color: var(--bg);
+    color: var(--text);
+}
+
+.attempts-table th {
+    padding: 1rem;
+    text-align: left;
+    font-weight: 700;
+    color: var(--text);
+    border-bottom: 2px solid var(--border);
+}
+
+.attempts-table td {
+    padding: 1rem;
+    border-bottom: 1px solid var(--border);
+    color: var(--text);
+}
+
+.attempts-table tbody tr:hover {
+    background-color: var(--bg);
+    transition: background-color 0.2s ease;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.status-completed {
+    background-color: #d4e4c7;
+    color: #2d4018;
+}
+
+.status-failed {
+    background-color: #f5d4d4;
+    color: #6b1e1e;
+}
+
+.status-running {
+    background-color: #f9e7c7;
+    color: #6b4b0f;
+}
+
+/* Status variants based on historical comparisons */
+.status-first-time {
+    background-color: #e1f0ff;
+    color: #0b3b66;
+}
+
+.status-better {
+    background-color: #d4e4c7;
+    color: #2d4018;
+}
+
+.status-worse {
+    background-color: #f5d4d4;
+    color: #6b1e1e;
+}
+
+.status-personal-best {
+    background-color: #fff4d7;
+    color: #6b4b0f;
+}
+
+.benchmark-badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.benchmark-a {
+    background-color: #7a9a5a;
+    color: white;
+}
+
+.benchmark-b {
+    background-color: #8baa6b;
+    color: white;
+}
+
+.benchmark-c {
+    background-color: #9bb97b;
+    color: white;
+}
+
+/* Map real benchmark names to green styles */
+.benchmark-reaction-test {
+    background-color: #7a9a5a;
+    color: white;
+}
+
+.benchmark-type-test {
+    background-color: #8baa6b;
+    color: white;
+}
+
+.benchmark-aim-test {
+    background-color: #9bb97b;
+    color: white;
+}
+
+/* Benchmark Graphs Section */
+/* Benchmark Graphs Section */
+.benchmark-graphs {
+    background: var(--surface);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+}
+
+.benchmark-graphs h2 {
+    margin: 0 0 2rem 0;
+    color: var(--text);
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: 'Moara Demo', system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    text-align: center;
+}
+
+.graph-container {
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.graph-card {
+    background: var(--bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    max-width: 800px;
+    width: 100%;
+}
+
+.graph-card h3 {
+    margin: 0 0 1.5rem 0;
+    color: var(--text);
+    font-size: 1.1rem;
+    font-weight: 700;
+    font-family: 'Stack Sans Text', system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    text-align: center;
+}
+
+.graph-card canvas {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+/* Responsive Design */
+@media (max-width: 800px) {
+    .content {
+        margin-left: 0;
+        padding: 1rem;
+    }
+
+    .dashboard-header {
+        padding: 1.5rem;
+    }
+
+    .dashboard-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .benchmark-attempts,
+    .benchmark-graphs {
+        padding: 1.5rem;
+    }
+
+    .attempts-table {
+        font-size: 0.85rem;
+    }
+
+    .attempts-table th,
+    .attempts-table td {
+        padding: 0.75rem 0.5rem;
+    }
+
+    .graph-card canvas {
+        width: 100% !important;
+        height: auto !important;
+    }
+}
+
+@media (max-width: 800px) {
+  .dashboard-header {
+    padding-left: 4.5rem;
+  }
+}
+

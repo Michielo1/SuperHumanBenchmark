@@ -1,0 +1,103 @@
+/* Base styles - variables, fonts, resets, body */
+
+/* LIGHT MODE (default) */
+:root {
+  --bg: #EEEEEE;
+  --text: #1a1a19;
+  --muted: #6b7280;
+
+  --surface: #ffffff;
+  --border: rgba(0, 0, 0, 0.12);
+
+  --hero: #628141;
+  --hero-hover: #6d9048;
+  --hero-active: #7fa852;
+
+  --nav-text: rgba(26, 26, 25, 0.70);
+  --nav-text-hover: #1a1a19;
+  --divider: rgba(26, 26, 25, 0.18);
+
+  --card-text: #ffffff;
+  --sidebar-width: 220px;
+  --sidebar-offset-medium: 120px;
+  --sidebar-offset-large: 120px;
+}  
+
+
+/* DARK MODE */
+html[data-theme="dark"],
+html.dark-mode {
+  --bg: #292929;
+  --text: #EEEEEE;
+  /* WIT in dark mode */
+  --muted: rgba(238, 238, 238, 0.7);
+
+  --surface: #2f2f2f;
+  --border: rgba(238, 238, 238, 0.12);
+
+  --hero: #628141;
+  --hero-hover: #6d9048;
+  --hero-active: #7fa852;
+
+  --nav-text: rgba(238, 238, 238, 0.75);
+  --nav-text-hover: #EEEEEE;
+  --divider: rgba(238, 238, 238, 0.18);
+
+  --card-text: #EEEEEE;
+  --sidebar-width: 220px;
+  --sidebar-offset-medium: 120px;
+  --sidebar-offset-large: 120px;
+}  
+
+
+/* Resets */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Fonts */
+@font-face {
+  font-family: 'Moara Demo';
+  src: url('../fonts/MoaraDemo-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Stack Sans Text';
+  src: url('../fonts/StackSansText-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+html[data-theme="dark"] #cookie-consent-popup{
+  background: #292929 !important;
+  color: #f5f5f5 !important;
+  border: 1px solid rgba(255,255,255,0.18) !important;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.5) !important;
+}
+
+html[data-theme="dark"] #cookie-consent-popup div{
+  color: #f5f5f5 !important;
+}
+
+html[data-theme="dark"] #cookie-consent-decline{
+  background: rgba(255,255,255,0.12) !important;
+  color: #f5f5f5 !important;
+}
+
+html[data-theme="dark"] #cookie-consent-accept{
+  background: #2b8fdd !important;
+  color: #ffffff !important;
+}

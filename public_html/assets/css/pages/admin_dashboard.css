@@ -1,0 +1,448 @@
+/* Dashboard Content Wrapper */
+.content {
+    margin-left: 220px;
+    padding: 2rem;
+    background-color: var(--bg);
+    min-height: 100vh;
+}
+
+/* Dashboard Header */
+.dashboard-header {
+    background: #628141;
+    color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+}
+
+.dashboard-header h1 {
+    margin: 0 0 0.5rem 0;
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: 'Moara Demo', system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+.user-info {
+    margin: 0;
+    opacity: 0.95;
+    font-size: 1rem;
+    font-family: 'Stack Sans Text', system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Dashboard Content */
+.dashboard-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.dashboard-header,
+.dashboard-content {
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+/* Benchmark Statistics Section */
+.benchmark-stats {
+    background: var(--surface);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+}
+
+.benchmark-stats h2 {
+    margin: 0 0 1.5rem 0;
+    color: var(--text);
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: 'Moara Demo', system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.stat-card {
+    background: var(--bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid #628141;
+}
+
+.stat-card h3 {
+    margin: 0 0 1rem 0;
+    color: var(--text);
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: 'Stack Sans Text', system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+.stat-value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #628141;
+    margin-bottom: 0.25rem;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+.stat-label {
+    font-size: 0.875rem;
+    color: var(--muted);
+    margin-bottom: 0.5rem;
+    font-family: 'Stack Sans Text', system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+.stat-meta {
+    font-size: 0.8rem;
+    color: var(--muted);
+    font-style: italic;
+    font-family: 'Stack Sans Text', system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+.stat-loading {
+    padding: 1.25rem;
+    color: var(--muted);
+    font-style: italic;
+}
+
+.stat-error {
+    padding: 1.25rem;
+    color: #8b1e1e;
+    font-weight: 700;
+}
+
+
+
+/* User Management Section */
+.user-management {
+    background: var(--surface);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.section-header h2 {
+    margin: 0;
+    color: var(--text);
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: 'Moara Demo', system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+.search-input {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-size: 0.95rem;
+    min-width: 250px;
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'Stack Sans Text', system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+/* ... (focus state can remain similar or use variables if desired) ... */
+
+.users-table-container {
+    overflow-x: auto;
+    margin-bottom: 1.5rem;
+}
+
+.users-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+}
+
+.users-table thead {
+    background-color: var(--bg);
+}
+
+.users-table th {
+    padding: 1rem;
+    text-align: left;
+    font-weight: 700;
+    color: var(--text);
+    border-bottom: 2px solid var(--border);
+    font-family: 'Stack Sans Text', system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+.users-table td {
+    padding: 1rem;
+    border-bottom: 1px solid var(--border);
+    color: var(--text);
+    font-family: 'Stack Sans Text', system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+.users-table tbody tr:hover {
+    background-color: var(--bg);
+    transition: background-color 0.2s ease;
+}
+
+/* Action Buttons */
+.action-btn {
+    padding: 0.4rem 0.8rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: 'Stack Sans Text', system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+.action-btn.delete-account {
+    background: #628141;
+    color: white;
+}
+
+.action-btn.delete-account:hover {
+    background: #4f6734;
+}
+
+.action-btn.view-details {
+    background: transparent;
+    color: #628141;
+    border: 1px solid #628141;
+    margin-left: 0.5rem;
+}
+
+.action-btn.view-details:hover {
+    background: #628141;
+    color: white;
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.pagination-btn {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: var(--surface);
+    color: var(--text);
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: 'Stack Sans Text', system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+.pagination-btn:hover:not(:disabled) {
+    background: #628141;
+    color: white;
+    border-color: #628141;
+}
+
+.pagination-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.pagination-info {
+    font-size: 0.95rem;
+    color: var(--text);
+    font-family: 'Stack Sans Text', system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.2s ease;
+}
+
+.modal.show {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.modal-content {
+    background-color: var(--surface);
+    border-radius: 12px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.modal-header h2 {
+    margin: 0;
+    color: var(--text);
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: 'Moara Demo', system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+.modal-close {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: var(--muted);
+    cursor: pointer;
+    line-height: 1;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s ease;
+}
+
+.modal-close:hover {
+    color: var(--text);
+}
+
+.modal-body {
+    padding: 1.5rem;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.detail-row:last-child {
+    border-bottom: none;
+}
+
+.detail-label {
+    font-weight: 600;
+    color: var(--text);
+    font-family: 'Stack Sans Text', system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+.detail-value {
+    color: var(--text);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+.modal-footer {
+    padding: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    gap: 0.75rem;
+    justify-content: flex-end;
+}
+
+.modal-btn-secondary {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: var(--surface);
+    color: var(--text);
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: 'Stack Sans Text', system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+.modal-btn-secondary:hover {
+    background: var(--bg);
+}
+
+/* Responsive Design */
+@media (max-width: 800px) {
+    .content {
+        margin-left: 0;
+        padding: 1rem;
+    }
+
+    .dashboard-header {
+        padding: 1.5rem;
+    }
+
+    .dashboard-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .search-input {
+        width: 100%;
+    }
+
+    .users-table {
+        font-size: 0.85rem;
+    }
+
+    .users-table th,
+    .users-table td {
+        padding: 0.75rem 0.5rem;
+    }
+
+    .action-btn {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.8rem;
+    }
+
+    .action-btn.view-details {
+        margin-left: 0.25rem;
+    }
+}

@@ -1,0 +1,111 @@
+body {
+    margin: 0;
+    margin-top: 100px;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.text {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 95%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    margin-top: 20px;
+    background-color: var(--surface);
+    border: solid;
+    border-radius: 10px;
+    border-width: 1px;
+    border-color: #aaa;
+    margin-bottom: 20px;
+    color: var(--text);
+}
+
+h1 {
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+p {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.button {
+    margin-bottom: 40px;
+    align-self: center;
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    padding: 10px;
+    font-size: 25px;
+    background-color: var(--hero);
+    border: none;
+    border-radius: 7px;
+}
+
+.button:hover {
+  background-color: var(--hero-hover);
+}
+
+.button:active {
+  background-color: var(--hero-active);
+}
+
+.first-stage {
+  display: none;
+  color: red;
+}
+
+.first-stage h1 {
+  color: var(--text);
+}
+
+.center-child {
+  text-align: center;
+}
+
+input {
+  width: 30%;
+  min-width: 250px;
+  height: 50px;
+  margin: 20px;
+  font-size: 30px;
+  background-color: var(--surface);
+  color: var(--text)
+}
+
+.text button {
+  font-size: 30px;
+  width: 30%;
+  min-width: 250px;
+  height: 50px;
+  margin: 0;
+  align-self: center;
+  margin-bottom: 30px;;
+}
+
+.fail {
+  display: none;
+}
+
+.success {
+  display: none;
+}
+
+.color {
+  background-color: red;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  height: 400px;
+  border-radius: 20px;
+  margin-bottom: 50px;
+}
+
+.stage2 {
+  text-align: center;
+  display: none;
+}
+
+
