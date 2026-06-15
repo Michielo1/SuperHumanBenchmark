@@ -1,0 +1,5 @@
+RewriteEngine On
+RewriteBase /
+
+# Route API requests with trailing path segments (e.g., reaction_test.php/start) to the PHP file
+RewriteRule ^api/(.*\.php).+ api/$1 [L]

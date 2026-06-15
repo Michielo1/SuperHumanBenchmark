@@ -1,6 +1,6 @@
 <?php
 /**
- * Demo Banner - Top bar shown in demo mode.
+ * Demo Banner - Top bar + side bars shown in demo mode.
  * Displays "Demo Version" label and countdown to next reset.
  *
  * Include at the top of <body> in every page:
@@ -20,6 +20,8 @@ if (!defined('DEMO_MODE') || !DEMO_MODE) {
         Next reset in: <strong id="demo-countdown"><?php echo DEMO_RESET_MINUTES; ?>:00</strong>
     </span>
 </div>
+<div class="demo-frame-left"><span>Demo</span></div>
+<div class="demo-frame-right"><span>Demo</span></div>
 <script>
 (function() {
     var resetMinutes = <?php echo DEMO_RESET_MINUTES; ?>;
