@@ -7,14 +7,14 @@ We are not responsible for any damage due to rage.
 This web application contains multiple test where you can test various skills.
 This website is similar to https://humanbenchmark.com/ but the tests here are more difficult.
 
-**NOTE: This project was completed in approximately two weeks during the final block of Semester 1 (January 2026) to meet a fixed deadline. As a result, some implementation details and code quality decisions reflect the project's time constraints rather than the standards I would apply in a longer-term production setting.**
+**NOTE: This project was completed in approximately two weeks during the final block of Semester 1 (January 2026) to meet a fixed deadline. As a result, some implementation details and code quality decisions reflect the project's time constraints rather than the standards we would apply in a longer-term production setting.**
 
 | Metric | Grade |
 |---|---:|
 | Dutch grading system | **9.5 / 10.0** |
 | Approximate U.S. GPA equivalent | **4.0 / 4.0*** |
 | Approximate U.S. letter grade equivalent | **A+*** |
-| Distinction | **Best Frontend Award (Student Vote)** |
+| Distinction | **Best Technical Website** |
 
 \* Approximate U.S. equivalents based on published Dutch university conversion tables. The University of Amsterdam maps Dutch grades of [9.0–10.0 to a U.S. letter grade of A+](https://www.uva.nl/en/education/studying-at-the-uva/educational-style-grading-and-credits/education-style-grading-and-credits.html?utm_source=chatgpt.com), while University College Utrecht maps Dutch grades of [8.0–10.0 to a 4.0 GPA](https://students.uu.nl/en/university-college-utrecht/practical-information/rules-and-procedures/grade-conversion?utm_source=chatgpt.com). Formal conversions may vary by institution.
 
